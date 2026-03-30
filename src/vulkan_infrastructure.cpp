@@ -85,20 +85,22 @@ void VkInfrastructure::createLogicalDev() {
     float queuePriority = 1.0f;
 
     // Create information about queues
-    VkDeviceQueueCreateInfo queueCreateInfo{ .sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO,
-                                             .queueFamilyIndex = familyIndex.familyIndex.value(),
-                                             .queueCount = 1,
-                                             .pQueuePriorities = &queuePriority};
+    VkDeviceQueueCreateInfo queueCreateInfo{};
+    queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+    queueCreateInfo.queueCount = 1;
+    queueCreateInfo.pQueuePriorities = &queuePriority;
+    queueCreateInfo.queueFamilyIndex = familyIndex.familyIndex.value();
 
     // Create information about logical device
-    VkDeviceCreateInfo createLogicalDevInfo{ .sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO,
-                                   .queueCreateInfoCount = 1,
-                                   .pQueueCreateInfos = &queueCreateInfo,
-                                   .enabledExtensionCount = 0,
-                                   .ppEnabledExtensionNames = nullptr,
-                                   .enabledLayerCount = 0,
-                                   .ppEnabledLayerNames = nullptr,
-                                   .pEnabledFeatures = nullptr};
+    VkDeviceCreateInfo createLogicalDevInfo{};
+    createLogicalDevInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+    createLogicalDevInfo.enabledExtensionCount = 0;
+    createLogicalDevInfo.ppEnabledExtensionNames = nullptr;
+    createLogicalDevInfo.enabledLayerCount = 0;
+    createLogicalDevInfo.ppEnabledLayerNames = nullptr;
+    createLogicalDevInfo.queueCreateInfoCount = 1;
+    createLogicalDevInfo.pQueueCreateInfos = &queueCreateInfo;
+    createLogicalDevInfo.pEnabledFeatures = nullptr;
     
     // Check if creation of logical device is successful
     if (vkCreateDevice(physicalDev, &createLogicalDevInfo, nullptr, &dev) != VK_SUCCESS) {
@@ -113,18 +115,20 @@ void VkInfrastructure::createLogicalDev() {
 void VkInfrastructure::createInstance() {
 
     // Info about application
-    VkApplicationInfo appInfo { .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO,
-                                .pApplicationName = "Vulkan Microbenchmark",
-                                .apiVersion = VK_API_VERSION_1_3};
+    VkApplicationInfo appInfo{};
+    appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    appInfo.apiVersion = VK_API_VERSION_1_3;
+    appInfo.pApplicationName = "Vulkan Microbenchmark";
 
     // Info about instance
-    VkInstanceCreateInfo instanceInfo { .sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO,
-                                        .pApplicationInfo = &appInfo,
-                                        .enabledExtensionCount = 0,
-                                        .ppEnabledExtensionNames = nullptr,
-                                        .enabledLayerCount = 0,
-                                        .ppEnabledLayerNames = nullptr};
-                    
+    VkInstanceCreateInfo instanceInfo{};
+    instanceInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    instanceInfo.enabledLayerCount = 0;
+    instanceInfo.ppEnabledLayerNames = nullptr;
+    instanceInfo.enabledExtensionCount = 0;
+    instanceInfo.ppEnabledExtensionNames = nullptr;
+    instanceInfo.pApplicationInfo = &appInfo;
+
     // Check if instance creation fails
     if (vkCreateInstance(&instanceInfo, nullptr, &instance) != VK_SUCCESS) {
         throw std::runtime_error("Vulkan instance creation failed");
@@ -134,9 +138,10 @@ void VkInfrastructure::createInstance() {
 void VkInfrastructure::createCmdPool() {
 
     // Create information about command pool
-    VkCommandPoolCreateInfo cmdPoolInfo{ .sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO,
-                                         .queueFamilyIndex = computeQueueFamilyIndex,
-                                         .flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT};
+    VkCommandPoolCreateInfo cmdPoolInfo{};
+    cmdPoolInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
+    cmdPoolInfo.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT;
+    cmdPoolInfo.queueFamilyIndex = computeQueueFamilyIndex;
 
     // Check if creation of command pool is successful
     if (vkCreateCommandPool(dev, &cmdPoolInfo, nullptr, &cmdPool) != VK_SUCCESS) {

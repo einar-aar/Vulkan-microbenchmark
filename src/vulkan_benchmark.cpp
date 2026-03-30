@@ -7,7 +7,7 @@
 
 VkBenchmark::VkBenchmark(VkInfrastructure& infrastructure) : infrastructure(infrastructure) {}
 
-VkBenchmark::~VkBenchmark() { cleanup() };
+VkBenchmark::~VkBenchmark() { cleanup(); };
 
 void VkBenchmark::runBenchmark() {
 
@@ -25,11 +25,12 @@ void VkBenchmark::runBenchmark() {
 
 void VkBenchmark::buildPipelineLayout() {
 
-    VkPipelineLayoutCreateInfo pipelineLayoutInfo{ .sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO,
-                                                   .pushConstantRangeCount = 0,
-                                                   .pPushConstantRanges = nullptr,
-                                                   .setLayoutCount = 0,
-                                                   .pSetLayouts = nullptr };
+    VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
+    pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
+    pipelineLayoutInfo.pushConstantRangeCount = 0;
+    pipelineLayoutInfo.pPushConstantRanges = nullptr;
+    pipelineLayoutInfo.setLayoutCount = 0;
+    pipelineLayoutInfo.pSetLayouts = nullptr;
 
     if (vkCreatePipelineLayout(infrastructure.getDev(), &pipelineLayoutInfo, nullptr, &pipelineLayout) != VK_SUCCESS) {
         throw std::runtime_error("Creation of pipeline layout failed");
@@ -38,16 +39,18 @@ void VkBenchmark::buildPipelineLayout() {
 
 void VkBenchmark::buildPipeline() {
 
-    VkPipelineShaderStageCreateInfo shaderStageInfo{ .sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO,
-                                                     .module = shaderModule,
-                                                     .pName = "main",
-                                                     .stage = VK_SHADER_STAGE_COMPUTE_BIT };
+    VkPipelineShaderStageCreateInfo shaderStageInfo{};
+    shaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
+    shaderStageInfo.module = shaderModule;
+    shaderStageInfo.pName = "main";
+    shaderStageInfo.stage = VK_SHADER_STAGE_COMPUTE_BIT;
 
-    VkComputePipelineCreateInfo pipelineInfo{ .sType = VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO,
-                                              .basePipelineIndex = -1,
-                                              .basePipelineHandle = VK_NULL_HANDLE,
-                                              .layout = pipelineLayout,
-                                              .stage = shaderStageInfo };
+    VkComputePipelineCreateInfo pipelineInfo{};
+    pipelineInfo.sType = VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO;
+    pipelineInfo.basePipelineIndex = -1;
+    pipelineInfo.basePipelineHandle = VK_NULL_HANDLE;
+    pipelineInfo.layout = pipelineLayout;
+    pipelineInfo.stage = shaderStageInfo;
 
     if (vkCreateComputePipelines(infrastructure.getDev(), VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &pipeline) != VK_SUCCESS) {
         throw std::runtime_error("Creation of computation pipeline failed");
@@ -56,10 +59,11 @@ void VkBenchmark::buildPipeline() {
 
 void VkBenchmark::buildShaderModule(const std::vector<char>& shaderCode) {
 
-    VkShaderModuleCreateInfo shaderModuleInfo{ .sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO,
-                                               // .pCode expects 32 bit unsigned pointer, shaderCode is char (8 bit on most systems)
-                                               .pCode = reinterpret_cast<const uint32_t*>(shaderCode.data()),
-                                               .codeSize = shaderCode.size() };
+    VkShaderModuleCreateInfo shaderModuleInfo{};
+    shaderModuleInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
+    // .pCode expects 32 bit unsigned pointer, shaderCode is char (8 bit on most systems)
+    shaderModuleInfo.pCode = reinterpret_cast<const uint32_t*>(shaderCode.data());
+    shaderModuleInfo.codeSize = shaderCode.size();
 
     if (vkCreateShaderModule(infrastructure.getDev(), &shaderModuleInfo, nullptr, &shaderModule) != VK_SUCCESS) {
         throw std::runtime_error("Creation of shader module failed");
@@ -68,8 +72,9 @@ void VkBenchmark::buildShaderModule(const std::vector<char>& shaderCode) {
 
 void VkBenchmark::buildFence() {
 
-    VkFenceCreateInfo fenceInfo{ .sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO,
-                                 .flags = 0 };
+    VkFenceCreateInfo fenceInfo{};
+    fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+    fenceInfo.flags = 0;
 
     if (vkCreateFence(infrastructure.getDev(), &fenceInfo, nullptr, &fence) != VK_SUCCESS) {
         throw std::runtime_error("Creation of fence failed");
@@ -78,11 +83,12 @@ void VkBenchmark::buildFence() {
 
 void VkBenchmark::setupCmdBuffer() {
 
-    VkCommandBufferAllocateInfo cmdBufferSetupInfo{ .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO,
-                                                            .commandBufferCount = 1,
-                                                            .commandPool = infrastructure.getCmdPool(),
-                                                            .level = VK_COMMAND_BUFFER_LEVEL_PRIMARY };
-                                                        
+    VkCommandBufferAllocateInfo cmdBufferSetupInfo{};
+    cmdBufferSetupInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
+    cmdBufferSetupInfo.commandBufferCount = 1;
+    cmdBufferSetupInfo.commandPool = infrastructure.getCmdPool();
+    cmdBufferSetupInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
+
     if (vkAllocateCommandBuffers(infrastructure.getDev(), &cmdBufferSetupInfo, &cmdBuffer) != VK_SUCCESS) {
         throw std::runtime_error("Setup of command buffer failed");
     }
@@ -90,9 +96,10 @@ void VkBenchmark::setupCmdBuffer() {
 
 void VkBenchmark::recordCmdBuffer() {
 
-    VkCommandBufferBeginInfo cmdBufferRecordingInfo { .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO,
-                                                          .pInheritanceInfo = nullptr,
-                                                          .flags = 0 };
+    VkCommandBufferBeginInfo cmdBufferRecordingInfo {};
+    cmdBufferRecordingInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
+    cmdBufferRecordingInfo.pInheritanceInfo = nullptr;
+    cmdBufferRecordingInfo.flags = 0;
 
     if (vkBeginCommandBuffer(cmdBuffer, &cmdBufferRecordingInfo) != VK_SUCCESS) {
         throw std::runtime_error("Starting recording of command buffer failed");
@@ -108,9 +115,10 @@ void VkBenchmark::recordCmdBuffer() {
 
 void VkBenchmark::submitCmdBuffer() {
 
-    VkSubmitInfo submitCmdBufferInfo{ .sType = VK_STRUCTURE_TYPE_SUBMIT_INFO,
-                                      .pCommandBuffers = &cmdBuffer,
-                                      .commandBufferCount = 1 };
+    VkSubmitInfo submitCmdBufferInfo{};
+    submitCmdBufferInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+    submitCmdBufferInfo.pCommandBuffers = &cmdBuffer;
+    submitCmdBufferInfo.commandBufferCount = 1;
 
     if (vkQueueSubmit(infrastructure.getQueue(), 1, &submitCmdBufferInfo, fence) != VK_SUCCESS) {
         throw std::runtime_error("Submitting of command buffer failed");

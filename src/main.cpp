@@ -1,5 +1,6 @@
 
 #include "vulkan_infrastructure.hpp"
+#include "vulkan_benchmark.hpp"
 #include <iostream>
 
 int main() {
@@ -14,13 +15,19 @@ int main() {
 
         uint32_t familyIndex = infrastructure.getComputeQueueFamilyIndex();
 
-        std::cout << "Vulkan computation infrastructure has been successfully instanciated\n"
+        std::cout << "Vulkan computation infrastructure has been successfully instantiated\n"
                   << "Infrastructure uses GPU: " << physicalDevProperties.deviceName << "\n"
                   << "Infrastructure uses queue family index: " << familyIndex << std::endl;
 
+        VkBenchmark benchmark(infrastructure);
+
+        benchmark.runBenchmark();
+
+        std::cout << "Benchmark ran successfully" << std::endl;
+
     } catch (const std::exception& error) {
 
-        std::cerr << "Infrastructure creation failed with error: " << error.what() << std::endl;
+        std::cerr << "Program failed with error: " << error.what() << std::endl;
         return EXIT_FAILURE;
     }
 

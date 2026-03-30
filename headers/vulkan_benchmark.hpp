@@ -37,7 +37,7 @@ private:
     // PRIVATE FUNCTIONS
     void buildPipelineLayout();
     void buildPipeline();
-    void buildShaderModule();
+    void buildShaderModule(const std::vector<char>& shaderCode);
     void buildFence();
 
     void setupCmdBuffer();
@@ -46,5 +46,5 @@ private:
 
     void cleanup();
 
-    std::vector<char> rdFile(const std::string& file) const;
+    std::vector<char> rdFile(const std::string& shaderFile) const;
 };
