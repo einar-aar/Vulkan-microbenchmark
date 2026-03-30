@@ -26,7 +26,7 @@ private:
 public:
     
     // PUBLIC FUNCTIONS
-    VkInfrastructure();
+    explicit VkInfrastructure();
     ~VkInfrastructure();
 
     // DO NOT allow copying, as this leads to undefined behaviour when you have multiple objects
