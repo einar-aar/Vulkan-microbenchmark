@@ -75,7 +75,7 @@ events:
       The output was:
       0
       MSBuild version 18.4.0+6e61e96ac for .NET Framework
-      Build started 30/03/2026 23:03:13.
+      Build started 30/03/2026 23:54:06.
       
       Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -113,7 +113,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.81
+      Time Elapsed 00:00:01.02
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -712,7 +712,7 @@ events:
       The output was:
       0
       MSBuild version 18.4.0+6e61e96ac for .NET Framework
-      Build started 30/03/2026 23:03:14.
+      Build started 30/03/2026 23:54:07.
       
       Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -750,7 +750,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.90
+      Time Elapsed 00:00:00.81
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -1120,8 +1120,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-2mhh8x"
-      binary: "C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-2mhh8x"
+      source: "C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-ae66dy"
+      binary: "C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-ae66dy"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1130,48 +1130,48 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-2mhh8x'
+        Change Dir: 'C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-ae66dy'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ab305.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e50d4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         MSBuild version 18.4.0+6e61e96ac for .NET Framework
-        Build started 30/03/2026 23:03:15.
+        Build started 30/03/2026 23:54:08.
         
-        Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2mhh8x\\cmTC_ab305.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae66dy\\cmTC_e50d4.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2mhh8x\\Debug\\".
-          Creating directory "cmTC_ab305.dir\\Debug\\cmTC_ab305.tlog\\".
+          Creating directory "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae66dy\\Debug\\".
+          Creating directory "cmTC_e50d4.dir\\Debug\\cmTC_e50d4.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_ab305.dir\\Debug\\cmTC_ab305.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_ab305.dir\\Debug\\cmTC_ab305.tlog\\unsuccessfulbuild".
+          Creating "cmTC_e50d4.dir\\Debug\\cmTC_e50d4.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e50d4.dir\\Debug\\cmTC_e50d4.tlog\\unsuccessfulbuild".
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_ab305.dir\\Debug\\\\" /Fd"cmTC_ab305.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_e50d4.dir\\Debug\\\\" /Fd"cmTC_e50d4.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35728 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /I"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_ab305.dir\\Debug\\\\" /Fd"cmTC_ab305.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          cl /c /I"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_e50d4.dir\\Debug\\\\" /Fd"cmTC_e50d4.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2mhh8x\\Debug\\cmTC_ab305.exe" /INCREMENTAL /ILK:"cmTC_ab305.dir\\Debug\\cmTC_ab305.ilk" /NOLOGO /LIBPATH:"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-2mhh8x/Debug/cmTC_ab305.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-2mhh8x/Debug/cmTC_ab305.lib" /MACHINE:X64  /machine:x64 cmTC_ab305.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_ab305.vcxproj -> C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2mhh8x\\Debug\\cmTC_ab305.exe
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae66dy\\Debug\\cmTC_e50d4.exe" /INCREMENTAL /ILK:"cmTC_e50d4.dir\\Debug\\cmTC_e50d4.ilk" /NOLOGO /LIBPATH:"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-ae66dy/Debug/cmTC_e50d4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-ae66dy/Debug/cmTC_e50d4.lib" /MACHINE:X64  /machine:x64 cmTC_e50d4.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_e50d4.vcxproj -> C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae66dy\\Debug\\cmTC_e50d4.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2mhh8x\\Debug\\cmTC_ab305.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_ab305.dir\\Debug\\cmTC_ab305.tlog\\cmTC_ab305.write.1u.tlog" "cmTC_ab305.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae66dy\\Debug\\cmTC_e50d4.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_e50d4.dir\\Debug\\cmTC_e50d4.tlog\\cmTC_e50d4.write.1u.tlog" "cmTC_e50d4.dir\\Debug\\vcpkg.applocal.log"
           'pwsh.exe' is not recognized as an internal or external command,
           operable program or batch file.
-          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2mhh8x\\Debug\\cmTC_ab305.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_ab305.dir\\Debug\\cmTC_ab305.tlog\\cmTC_ab305.write.1u.tlog" "cmTC_ab305.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2mhh8x\\Debug\\cmTC_ab305.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_ab305.dir\\Debug\\cmTC_ab305.tlog\\cmTC_ab305.write.1u.tlog" "cmTC_ab305.dir\\Debug\\vcpkg.applocal.log"
+          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae66dy\\Debug\\cmTC_e50d4.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_e50d4.dir\\Debug\\cmTC_e50d4.tlog\\cmTC_e50d4.write.1u.tlog" "cmTC_e50d4.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae66dy\\Debug\\cmTC_e50d4.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_e50d4.dir\\Debug\\cmTC_e50d4.tlog\\cmTC_e50d4.write.1u.tlog" "cmTC_e50d4.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          Deleting file "cmTC_ab305.dir\\Debug\\cmTC_ab305.tlog\\unsuccessfulbuild".
-          Touching "cmTC_ab305.dir\\Debug\\cmTC_ab305.tlog\\cmTC_ab305.lastbuildstate".
-        Done Building Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2mhh8x\\cmTC_ab305.vcxproj" (default targets).
+          Deleting file "cmTC_e50d4.dir\\Debug\\cmTC_e50d4.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e50d4.dir\\Debug\\cmTC_e50d4.tlog\\cmTC_e50d4.lastbuildstate".
+        Done Building Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae66dy\\cmTC_e50d4.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.82
+        Time Elapsed 00:00:00.80
         
       exitCode: 0
   -
@@ -1211,8 +1211,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-3eersj"
-      binary: "C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-3eersj"
+      source: "C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-gr4xmn"
+      binary: "C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-gr4xmn"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1222,48 +1222,48 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-3eersj'
+        Change Dir: 'C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-gr4xmn'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3b5b3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d8030.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         MSBuild version 18.4.0+6e61e96ac for .NET Framework
-        Build started 30/03/2026 23:03:16.
+        Build started 30/03/2026 23:54:09.
         
-        Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3eersj\\cmTC_3b5b3.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gr4xmn\\cmTC_d8030.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3eersj\\Debug\\".
-          Creating directory "cmTC_3b5b3.dir\\Debug\\cmTC_3b5b3.tlog\\".
+          Creating directory "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gr4xmn\\Debug\\".
+          Creating directory "cmTC_d8030.dir\\Debug\\cmTC_d8030.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_3b5b3.dir\\Debug\\cmTC_3b5b3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_3b5b3.dir\\Debug\\cmTC_3b5b3.tlog\\unsuccessfulbuild".
+          Creating "cmTC_d8030.dir\\Debug\\cmTC_d8030.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_d8030.dir\\Debug\\cmTC_d8030.tlog\\unsuccessfulbuild".
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_3b5b3.dir\\Debug\\\\" /Fd"cmTC_3b5b3.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_d8030.dir\\Debug\\\\" /Fd"cmTC_d8030.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35728 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /I"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_3b5b3.dir\\Debug\\\\" /Fd"cmTC_3b5b3.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /I"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_d8030.dir\\Debug\\\\" /Fd"cmTC_d8030.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3eersj\\Debug\\cmTC_3b5b3.exe" /INCREMENTAL /ILK:"cmTC_3b5b3.dir\\Debug\\cmTC_3b5b3.ilk" /NOLOGO /LIBPATH:"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-3eersj/Debug/cmTC_3b5b3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-3eersj/Debug/cmTC_3b5b3.lib" /MACHINE:X64  /machine:x64 cmTC_3b5b3.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_3b5b3.vcxproj -> C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3eersj\\Debug\\cmTC_3b5b3.exe
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gr4xmn\\Debug\\cmTC_d8030.exe" /INCREMENTAL /ILK:"cmTC_d8030.dir\\Debug\\cmTC_d8030.ilk" /NOLOGO /LIBPATH:"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-gr4xmn/Debug/cmTC_d8030.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/CMakeScratch/TryCompile-gr4xmn/Debug/cmTC_d8030.lib" /MACHINE:X64  /machine:x64 cmTC_d8030.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_d8030.vcxproj -> C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gr4xmn\\Debug\\cmTC_d8030.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3eersj\\Debug\\cmTC_3b5b3.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_3b5b3.dir\\Debug\\cmTC_3b5b3.tlog\\cmTC_3b5b3.write.1u.tlog" "cmTC_3b5b3.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gr4xmn\\Debug\\cmTC_d8030.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_d8030.dir\\Debug\\cmTC_d8030.tlog\\cmTC_d8030.write.1u.tlog" "cmTC_d8030.dir\\Debug\\vcpkg.applocal.log"
           'pwsh.exe' is not recognized as an internal or external command,
           operable program or batch file.
-          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3eersj\\Debug\\cmTC_3b5b3.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_3b5b3.dir\\Debug\\cmTC_3b5b3.tlog\\cmTC_3b5b3.write.1u.tlog" "cmTC_3b5b3.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3eersj\\Debug\\cmTC_3b5b3.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_3b5b3.dir\\Debug\\cmTC_3b5b3.tlog\\cmTC_3b5b3.write.1u.tlog" "cmTC_3b5b3.dir\\Debug\\vcpkg.applocal.log"
+          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gr4xmn\\Debug\\cmTC_d8030.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_d8030.dir\\Debug\\cmTC_d8030.tlog\\cmTC_d8030.write.1u.tlog" "cmTC_d8030.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\einar\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gr4xmn\\Debug\\cmTC_d8030.exe" "C:\\Users\\einar\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_d8030.dir\\Debug\\cmTC_d8030.tlog\\cmTC_d8030.write.1u.tlog" "cmTC_d8030.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          Deleting file "cmTC_3b5b3.dir\\Debug\\cmTC_3b5b3.tlog\\unsuccessfulbuild".
-          Touching "cmTC_3b5b3.dir\\Debug\\cmTC_3b5b3.tlog\\cmTC_3b5b3.lastbuildstate".
-        Done Building Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3eersj\\cmTC_3b5b3.vcxproj" (default targets).
+          Deleting file "cmTC_d8030.dir\\Debug\\cmTC_d8030.tlog\\unsuccessfulbuild".
+          Touching "cmTC_d8030.dir\\Debug\\cmTC_d8030.tlog\\cmTC_d8030.lastbuildstate".
+        Done Building Project "C:\\Users\\einar\\Vulkan\\dev\\vulkan microbenchmark\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gr4xmn\\cmTC_d8030.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.84
+        Time Elapsed 00:00:00.85
         
       exitCode: 0
   -

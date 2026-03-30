@@ -34,12 +34,22 @@ void VkInfrastructure::choosePhysicalDev() {
     std::vector<VkPhysicalDevice> devs(devCount);
     vkEnumeratePhysicalDevices(instance, &devCount, devs.data());
 
-    // Iterate through all physical devices found, and find first that has compute family queues
-    for (const auto& it : devs) {
-        if (checkDevSuitability(it)) {
-            physicalDev = it;
-            break;
+    // Iterate through all physical devices found
+    for (const auto& devIt : devs) {
+
+        if (!checkDevSuitability(devIt)) continue;
+
+        VkPhysicalDeviceProperties devProperties{};
+        vkGetPhysicalDeviceProperties(devIt, &devProperties);
+
+        // Choose first suitable discrete GPU available
+        if (devProperties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU) {
+            physicalDev = devIt;
+            return;
         }
+
+        // If no discrete available, choose whatever the system finds that is suitable
+        physicalDev = devIt;
     }
 
     // Error if no suitable GPU found

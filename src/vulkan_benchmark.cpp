@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <fstream>
 #include <stdexcept>
+#include <iostream>
 
 VkBenchmark::VkBenchmark(VkInfrastructure& infrastructure) : infrastructure(infrastructure) {}
 
@@ -17,10 +18,12 @@ void VkBenchmark::runBenchmark() {
     buildShaderModule(shaderCode);
     buildPipelineLayout();
     buildPipeline();
+    buildQueryPool();
     setupCmdBuffer();
     recordCmdBuffer();
     buildFence();
     submitCmdBuffer();
+    printGpuTime();
 }
 
 void VkBenchmark::buildPipelineLayout() {
@@ -81,6 +84,18 @@ void VkBenchmark::buildFence() {
     }
 }
 
+void VkBenchmark::buildQueryPool() {
+
+    VkQueryPoolCreateInfo queryPoolInfo{};
+    queryPoolInfo.sType = VK_STRUCTURE_TYPE_QUERY_POOL_CREATE_INFO;
+    queryPoolInfo.queryCount = 2;
+    queryPoolInfo.queryType = VK_QUERY_TYPE_TIMESTAMP;
+
+    if (vkCreateQueryPool(infrastructure.getDev(), &queryPoolInfo, nullptr, &queryPool) != VK_SUCCESS) {
+        throw std::runtime_error("Creation of query pool failed");
+    }
+}
+
 void VkBenchmark::setupCmdBuffer() {
 
     VkCommandBufferAllocateInfo cmdBufferSetupInfo{};
@@ -105,8 +120,16 @@ void VkBenchmark::recordCmdBuffer() {
         throw std::runtime_error("Starting recording of command buffer failed");
     }
 
+    // Reset the two slots we will use for GPU start and end time
+    vkCmdResetQueryPool(cmdBuffer, queryPool, 0, 2);
+    vkCmdWriteTimestamp(cmdBuffer, VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT, queryPool, 0);
+
+    // Dispatching 64x64 workgroups, each with 8x8 threads leading to a total of 262144 threads
     vkCmdBindPipeline(cmdBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, pipeline);
-    vkCmdDispatch(cmdBuffer, 1, 1, 1);
+    vkCmdDispatch(cmdBuffer, 64, 64, 1);
+
+    // Get end time
+    vkCmdWriteTimestamp(cmdBuffer, VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT, queryPool, 1);
 
     if (vkEndCommandBuffer(cmdBuffer) != VK_SUCCESS) {
         throw std::runtime_error("Ending of command buffer recording failed");
@@ -137,6 +160,26 @@ void VkBenchmark::cleanup() {
     if (pipeline != VK_NULL_HANDLE) vkDestroyPipeline(infrastructure.getDev(), pipeline, nullptr);
     if (pipelineLayout != VK_NULL_HANDLE) vkDestroyPipelineLayout(infrastructure.getDev(), pipelineLayout, nullptr);
     if (shaderModule != VK_NULL_HANDLE) vkDestroyShaderModule(infrastructure.getDev(), shaderModule, nullptr);
+    if (queryPool != VK_NULL_HANDLE) vkDestroyQueryPool(infrastructure.getDev(), queryPool, nullptr);
+}
+
+void VkBenchmark::printGpuTime() {
+
+    uint64_t time[2] = {};
+
+    // Get the start and end time
+    if (vkGetQueryPoolResults(infrastructure.getDev(), queryPool, 0, 2, sizeof(time), time, sizeof(uint64_t),
+                              VK_QUERY_RESULT_64_BIT | VK_QUERY_RESULT_WAIT_BIT) != VK_SUCCESS) {
+                                throw std::runtime_error("Could not retrieve GPU time");
+                              }
+
+    VkPhysicalDeviceProperties devProperties{};
+    vkGetPhysicalDeviceProperties(infrastructure.getPhysicalDev(), &devProperties);
+
+    double periodUs = devProperties.limits.timestampPeriod / 1000.0;
+    double timeUs = double(time[1] - time[0]) * periodUs;
+
+    std::cout << "GPU time: " << timeUs << " us" << std::endl;
 }
 
 std::vector<char> VkBenchmark::rdFile(const std::string& shaderFile) const {

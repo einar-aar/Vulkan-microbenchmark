@@ -16,6 +16,7 @@ private:
     VkShaderModule shaderModule = VK_NULL_HANDLE;
     VkFence fence = VK_NULL_HANDLE;
     VkCommandBuffer cmdBuffer = VK_NULL_HANDLE;
+    VkQueryPool queryPool = VK_NULL_HANDLE;
 
     VkInfrastructure& infrastructure;
 
@@ -39,6 +40,7 @@ private:
     void buildPipeline();
     void buildShaderModule(const std::vector<char>& shaderCode);
     void buildFence();
+    void buildQueryPool();
 
     void setupCmdBuffer();
     void recordCmdBuffer();
@@ -46,5 +48,6 @@ private:
 
     void cleanup();
 
+    void printGpuTime();
     std::vector<char> rdFile(const std::string& shaderFile) const;
 };
