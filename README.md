@@ -3,7 +3,7 @@
 This project is a simple GPU microbenchmark built with Vulkan. 
 It measures execution time of a compute shader using timestamp queries.
 
-You may download the executable and run it directly without recompiling. However, if you want to change something, you would need to download the Vulkan SDK
+Compiling the project relies upon the Vulkan SDK
 
 The goal is to provide a minimal setup for running repeatable GPU timing experiments.
 
