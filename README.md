@@ -3,6 +3,8 @@
 This project is a simple GPU microbenchmark built with Vulkan. 
 It measures execution time of a compute shader using timestamp queries.
 
+You may download the executable and run it directly without recompiling. However, if you want to change something, you would need to download the Vulkan SDK
+
 The goal is to provide a minimal setup for running repeatable GPU timing experiments.
 
 ---
@@ -37,11 +39,11 @@ Run the Python script:
 The script produces:
 
 - Raw data:  
-  `data/<test_name>_complete_test_list.txt`  
+  `data/Benchmark_01_complete_test_list.txt`  
   (one run per line)
 
 - Plot:  
-  `data/<test_name>_results.png`
+  `data/Benchmark_01_results.png`
 
 ---
 
