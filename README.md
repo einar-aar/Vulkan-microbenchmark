@@ -49,21 +49,11 @@ The script produces:
 
 BENCHMARK SUMMARY:
 
-Lowest time: 595.168 us
-Highest time: 1676.220 us
-Mean time: 605.893 us
-Median time: 596.128 us
-Standard deviation: 90.981 us
-
----
-
-## Example plot
-
-
-::contentReference[oaicite:0]{index=0}
-
-
-Actual output from this project:
+- Lowest time: 595.168 us
+- Highest time: 1676.220 us
+- Mean time: 605.893 us
+- Median time: 596.128 us
+- Standard deviation: 90.981 us
 
 ![Example Results](Example_results.png)
 
