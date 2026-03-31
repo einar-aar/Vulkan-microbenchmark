@@ -3,6 +3,9 @@
 
 layout(local_size_x = 8, local_size_y = 8, local_size_z = 1) in;
 
+// Using a buffer to reduce the risk of the compiler optimizing this away
+layout(binding = 0) buffer Data { float values[]; };
+
 void main() {
     
     uint xCoordinate = gl_GlobalInvocationID.x;
@@ -11,11 +14,14 @@ void main() {
     float x = float(xCoordinate);
     float y = float(yCoordinate);
 
-    for (int i = 0; i < 2500; i++) {
-        x*=1.0001;
-        y*=1.0002;
+    for (int i = 0; i < 10000; i++) {
+        x = x * 1.0001 + 0.0002;
+        y = y * 1.0002 + 0.0001;
     }
 
-    // Make sure compiler doesn't optimize away unused variables
-    if (x + y < 0.0) x = 0.0;
+    // This width needs to match dispatch x * local_size_x
+    uint width = 64 * 8;
+    uint idx = yCoordinate * width + xCoordinate;
+
+    values[idx] = x * 1.01 + y * 0.01;
 }

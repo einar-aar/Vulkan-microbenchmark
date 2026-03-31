@@ -92,6 +92,7 @@ void VkInfrastructure::createLogicalDev() {
 
     if (!familyIndex.hasValue()) throw std::runtime_error("No queue family with compute functionality");
 
+    computeQueueFamilyIndex = familyIndex.familyIndex.value();
     float queuePriority = 1.0f;
 
     // Create information about queues

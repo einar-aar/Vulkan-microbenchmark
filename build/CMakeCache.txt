@@ -77,7 +77,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build/CMakeFiles/pkgRedirects
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/vulkan_microbench
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/vulkan_microbenchmark
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe
@@ -115,7 +115,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=vulkan_microbench
+CMAKE_PROJECT_NAME:STATIC=vulkan_microbenchmark
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -204,13 +204,13 @@ Vulkan_INCLUDE_DIR:PATH=C:/Users/einar/Vulkan/Vulkan SDK/include
 Vulkan_LIBRARY:FILEPATH=C:/Users/einar/Vulkan/Vulkan SDK/Lib/vulkan-1.lib
 
 //Value Computed by CMake
-vulkan_microbench_BINARY_DIR:STATIC=C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build
+vulkan_microbenchmark_BINARY_DIR:STATIC=C:/Users/einar/Vulkan/dev/vulkan microbenchmark/build
 
 //Value Computed by CMake
-vulkan_microbench_IS_TOP_LEVEL:STATIC=ON
+vulkan_microbenchmark_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-vulkan_microbench_SOURCE_DIR:STATIC=C:/Users/einar/Vulkan/dev/vulkan microbenchmark
+vulkan_microbenchmark_SOURCE_DIR:STATIC=C:/Users/einar/Vulkan/dev/vulkan microbenchmark
 
 
 ########################
