@@ -1,6 +1,6 @@
 # Vulkan Microbenchmark
 
-This project is a simple GPU microbenchmark built with Vulkan. 
+This project is a simple GPU benchmark built with Vulkan. 
 It measures execution time of a compute shader using timestamp queries.
 
 Compiling the project relies upon the Vulkan SDK
