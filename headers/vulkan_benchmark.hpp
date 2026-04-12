@@ -2,6 +2,7 @@
 #pragma once
 
 #include "vulkan_infrastructure.hpp"
+#include "nvidia_profiler.hpp"
 #include <vulkan/vulkan.h>
 #include <string>
 #include <vector>
@@ -27,6 +28,7 @@ private:
     VkBuffer buffer = VK_NULL_HANDLE;
 
     VkInfrastructure& infrastructure;
+    NvidiaProfiler nvidiaProfiler;
 
 public:
 
@@ -69,6 +71,7 @@ private:
 
     void cleanup();
 
+    // Misc
     void printGpuTime();
     std::vector<char> rdFile(const std::string& shaderFile) const;
 };

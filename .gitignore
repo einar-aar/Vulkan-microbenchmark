@@ -6,3 +6,10 @@ build/cmake_install.cmake
 
 # Executables
 *.exe
+
+# External
+external/
+
+.cache/
+.vscode/
+CMakeFiles/

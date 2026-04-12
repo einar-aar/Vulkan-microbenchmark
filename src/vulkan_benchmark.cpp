@@ -1,5 +1,7 @@
 
 #include "vulkan_benchmark.hpp"
+#include "nvidia_profiler.hpp"
+#include <nvperf_host.h>
 
 #include <cstdint>
 #include <fstream>
@@ -11,6 +13,8 @@ VkBenchmark::VkBenchmark(VkInfrastructure& infrastructure) : infrastructure(infr
 VkBenchmark::~VkBenchmark() { cleanup(); };
 
 void VkBenchmark::runBenchmark() {
+
+    nvidiaProfiler.initialize();
 
     // Read workload code
     const std::vector<char> shaderCode = rdFile("shaders/compute_shader.comp.spv");
@@ -358,3 +362,7 @@ std::vector<char> VkBenchmark::rdFile(const std::string& shaderFile) const {
 
     return shaderCodeBuffer;
 }
+
+//////////////////////
+// NVIDIA PROFILING //
+//////////////////////

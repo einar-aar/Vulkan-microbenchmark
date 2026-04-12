@@ -21,7 +21,7 @@ SCRIPT_P = Path(__file__).resolve().parent
 ROOT = SCRIPT_P.parent
 TEXT_DATA_P = ROOT / "data" / f"{TEST_NAME}_complete_test_list.txt"
 PLOT_DATA_P = ROOT / "data" / f"{TEST_NAME}_results.png"
-EXECUTE_P = ROOT / "build" / "Debug" / "vulkan_microbenchmark.exe"
+EXECUTE_P = ROOT / "build" / "vulkan_microbenchmark.exe"
 
 # Pattern to find gpu time in terminal (what to search for in std::cout)
 TIME_PATTERN = re.compile(r"GPU time:\s*([0-9]+(?:\.[0-9]+)?)")
